@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testimonial-flip-card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!--
+    Feature: testimonial-flip-card
+    Node refs Figma:
+      - Cara frontal (quote): 54986:4
+      - Cara trasera (video placeholder): 54986:14
+    Interacción: click/tap en la card para "doblarla" (flip 3D) y revelar
+    la miniatura del video del testimonio. Click de nuevo para volver.
+  -->
+
+  <div class="testimonial-flip-card">
+    <button
+      type="button"
+      class="testimonial-flip-card__trigger"
+      aria-pressed="true"
+      aria-label="Ver video del testimonio de Emily Carter"
+      data-flip-card
+    >
+      <div class="testimonial-flip-card__inner">
+
+        <!-- Cara frontal: quote -->
+        <div class="testimonial-flip-card__face testimonial-flip-card__face--front" data-node-id="54986:4">
+          <div class="testimonial-card-quote">
+            <div class="testimonial-card-quote__content">
+              <span class="testimonial-card-quote__icon" aria-hidden="true">
+                <img src="assets/1e58837a-7aa9-4dd4-bed5-f9e0bb1be6c0.svg" alt="" />
+              </span>
+              <p class="testimonial-card-quote__text">
+                Quick delivery, beautiful bar, exactly as show on the live. Will buy again.
+              </p>
+            </div>
+
+            <div class="testimonial-card-quote__who">
+              <img
+                class="testimonial-card-quote__avatar"
+                src="https://www.figma.com/api/mcp/asset/210d2de6-fecc-4201-84df-faddb569ae34.png"
+                alt=""
+                width="30"
+                height="30"
+              />
+              <div class="testimonial-card-quote__who-text">
+                <p class="testimonial-card-quote__name">Emily Carter</p>
+                <p class="testimonial-card-quote__role">Verified buyer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cara trasera: video placeholder -->
+        <div class="testimonial-flip-card__face testimonial-flip-card__face--back" data-node-id="54986:14">
+          <div class="testimonial-card-video">
+            <img
+              class="testimonial-card-video__thumb"
+              src="https://www.figma.com/api/mcp/asset/0820c237-0438-4747-a5a8-027025d3e225.png"
+              alt="Emily Carter mostrando el producto"
+            />
+            <div class="testimonial-card-video__gradient" aria-hidden="true"></div>
+
+            <div class="testimonial-card-video__caption">
+              <p class="testimonial-card-video__name">Emily Carter · Verified buyer</p>
+              <p class="testimonial-card-video__quote">
+                &ldquo;Quick delivery, beautiful bar, exactly as shown on the live. Will buy again.&rdquo;
+              </p>
+            </div>
+
+            <span class="testimonial-card-video__play" aria-hidden="true">
+              <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L11 7L0 14V0Z" fill="black" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
